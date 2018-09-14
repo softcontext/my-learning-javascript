@@ -13,6 +13,8 @@ const server = http.createServer(function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Origin', '*');
   
+  // 서버가 브라우저에게 전달하고 싶은 데이터를 
+  // response 객체에 추가하면 전달이 된다.
   res.end(JSON.stringify({
     platform: process.platform,
     nodeVersion: process.version,
@@ -22,9 +24,20 @@ const server = http.createServer(function(req, res) {
 
 const port = 7070;
 
+// 포트 번호를 주고 서버를 기동한다.
 server.listen(port, function() {
+  // 서버 기동이 정상이면 호출되는 콜백함수다.
   console.log(`Ajax server started on port ${port}`);
 });
+
+// babel-node Server.js
+// Server.js 파일 내 코드가 노드 컴파일러가 이해하지 못하는
+// 최신 문법인 경우, 바벨을 통해 문법을 다운그레이드하고
+// 그 다음 노드를 사용하여 코드를 처리하는 명령입니다.
+
+
+
+
 
 
 
