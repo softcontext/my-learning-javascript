@@ -4,7 +4,8 @@
 // console.log(obj.b); // undefined
 
 /*
-  일반적으로 모든 객체는 히든 프로퍼티 __proto__ 를 갖는다.
+  일반적으로(의도적으로 고아 객체를 만들지 않았다면) 
+  모든 객체는 히든 프로퍼티 __proto__ 를 갖는다.
   __proto__ 프로퍼티로 부모 객체를 참조한다.
 */
 function Foo(name) {

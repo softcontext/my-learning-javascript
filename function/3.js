@@ -1,8 +1,19 @@
 /*
-  JS 자료형은 몇 개 인가요? 7개입니다.
-  1개
-  8개
-  무한대
+  JS 자료형은 몇 개 인가요? 
+  
+  7개입니다.
+  number, string, boolean
+  null, undefined
+  object
+  symbol: 믹스인 적용으로 인한 프로퍼티 충돌을 
+  예방할 수 있습니다.
+  
+  string은 원시타입과 객체타입이 각각 존재합니다.
+  var str1 = "Tom"; // string
+  var str2 = new String("Tom"); // object
+  
+  원사타입은 오토박싱이 적용되므로 바로 객체처럼
+  사용할 수 있습니다.
 */
 
 var a = 10;

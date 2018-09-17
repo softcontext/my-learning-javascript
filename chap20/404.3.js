@@ -4,6 +4,10 @@ console.log(this === exports); // true
 // exports: 노드가 제공하는 예약어로 객체입니다.
 // 이 파일에서 다른 파일로 제공하고 싶은 자원을 
 // 직접 선택하여 노출하고 싶을 때 등록하는 객체입니다.
+// 노드는 파일단위로 코드를 격리하기 위해서
+// 파일 전체 코드를 IIFE 식으로 감싸서 처리합니다.
+// 따라서, 다른 파일에 제공하고 싶은 자원이 있다면
+// exports 객체에 해당 자원을 추가하는 방식으로 설정합니다.
 
 console.log(1);
 
@@ -25,12 +29,14 @@ console.log(3);
 
 (function(outlet) { // 개발자 B
   var a = 20;
-  console.log(2, a);
+  console.log(4, a);
   
   outlet.B = { // B 문자열은 패키지 역할을 수행
     a
   };
 }(this));
+
+console.log(5);
 
 console.log('--------------');
 
